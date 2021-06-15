@@ -1,13 +1,12 @@
 import unittest
-from selenium import webdriver
+from project.src.scraperbase.web_driver import WebDriver
 
 class WebDriverSetup(unittest.TestCase):
+
     def setUp(self):
-        self.driver = webdriver.Chrome()
+        self.driver = WebDriver.web_driver_chrome
         self.driver.implicitly_wait(10)
 
     def tearDown(self):
         if(self.driver != None):
             print("Tearing down")
-            self.driver.close()
-            self.driver.quit()
