@@ -8,9 +8,11 @@ class ExplorerScript(WebDriverSetup):
 
     def test_view_all_blocks(self):
         explorer = ExplorerPage(self.driver)
+        accept_cookies = explorer.get_accept_cookies()
+        accept_cookies.click()
         time.sleep(1)
         all_blocks_button = explorer.get_all_blocks_button()
-        time.sleep(5)
+        time.sleep(1)
         all_blocks_button.click()
         time.sleep(1)
 
