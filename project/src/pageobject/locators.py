@@ -6,3 +6,6 @@ class ExplorerPageLocator:
     ACCEPT_COOKIES = '//*[@id="__next"]/div[6]/div/button'
     ALL_BLOCKS_BUTTON = '//*[@id="__next"]/div[3]/div/div[5]/div/div[2]/div[1]/div/a/button'
 
+class BlocksPageLocator:
+    BLOCK_CLASS = 'sc-1g6z4xm-0'
+    TIME_CLASS = 'fTyXWG'
