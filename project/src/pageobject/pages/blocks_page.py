@@ -11,7 +11,7 @@ class BlocksPage:
         return self.blocks_list
 
     def get_recent_blocks(self, block_list):
-        recent_blocks = [block.find_element(By.CLASS_NAME, BlocksPageLocator.TIME_CLASS).text for block in block_list
+        recent_blocks = [block for block in block_list
                          if self.is_recent(block.find_element(By.CLASS_NAME, BlocksPageLocator.TIME_CLASS).text)]
         return recent_blocks
 
@@ -20,7 +20,7 @@ class BlocksPage:
         if splitted[1] != 'minutes':
             return False
         elif splitted[1] == 'minutes':
-            if int(splitted[0]) < 15:
+            if int(splitted[0]) < 45:
                 return True
             else:
                 return False

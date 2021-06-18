@@ -8,4 +8,7 @@ class ExplorerPageLocator:
 
 class BlocksPageLocator:
     BLOCK_CLASS = 'sc-1g6z4xm-0'
+    HEiGHT_CLASS = 'emaUuf'
+    HASH_CLASS = 'kLjLbm'
     TIME_CLASS = 'fTyXWG'
+    SIZE_CLASS = 'iEZwoE'
