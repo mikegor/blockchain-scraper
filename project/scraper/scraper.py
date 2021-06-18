@@ -3,7 +3,7 @@ from project.scraper.scripts.home_script import HomeScript
 from project.scraper.scripts.explorer_script import ExplorerScript
 from project.scraper.scripts.blocks_script import BlocksScript
 from project.src.scraperbase.web_driver import WebDriver
-from project.scraper.db.data_to_save import DataToSave
+from project.scraper.db.db import Db
 
 if __name__ == "__main__":
 
@@ -17,7 +17,7 @@ if __name__ == "__main__":
     test_runner = TextTestRunner(verbosity=2)
     test_runner.run(test_suite)
 
-    DataToSave.get_blocks()
+    Db.insert_recent_blocks()
 
     WebDriver.web_driver_chrome.close()
     WebDriver.web_driver_chrome.quit()

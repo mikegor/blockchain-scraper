@@ -15,7 +15,7 @@ class DataToSave:
         blocks_to_get = [(DataToSave.get_height(block), DataToSave.get_hash(block),
                           DataToSave.get_date(), DataToSave.get_size(block))
                          for block in DataToSave.blocks]
-        print(blocks_to_get)
+        return blocks_to_get
 
     @staticmethod
     def get_height(block):
@@ -25,6 +25,7 @@ class DataToSave:
     def get_hash(block):
         return block.find_element(By.CLASS_NAME, BlocksPageLocator.HASH_CLASS).text
 
+    #to do create proper date based on added time
     @staticmethod
     def get_date():
         current_date = datetime.now()
